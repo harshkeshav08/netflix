@@ -1,0 +1,9 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Original+Surfer&display=swap');
+
+*{
+     font-family: "Original Surfer", sans-serif;
+}
+
+@import "tailwindcss";
+
