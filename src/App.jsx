@@ -4,6 +4,17 @@ import Details from "./component/details"
 import Questions from "./component/questions"
 
 function App(){
+
+   const apiUrl = import.meta.env.VITE_API_URL;
+
+   const callApi = async()=>{
+     
+    const response  = await(fetch(`${apiUrl}/api`)
+    )
+
+
+   }
+
   return(
 
     <div className="min-h-screen bg-black">
