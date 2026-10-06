@@ -4,7 +4,7 @@ const movies = [
     title: "India’s Got Latent",
     description: "India’s Got Latent is a Hindi comedy-talent reality show.",
     image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQes1irsGcoylnDkdnPO5IKPx3FnUesqfaru2BfzIfGxyz2YDj9EQViZZNR52eWbz1mJwBXaFsLPVvUvmrdalZaj3StiV_H6xK-VRxshan4jA&s=10",
-   video: "https://www.youtube.com/embed/ONqp22xweLM"
+    video: "https://www.youtube.com/embed/ONqp22xweLM"
   },
   {
     id: 2,
@@ -16,14 +16,14 @@ const movies = [
   {
     id: 3,
     title: "Lust Stories 2",
-    description: "Four eminent Indian directors explore sex, relationships, desire and love through short films in this sequel to 2018's Emmy-nominated Lust Stories",
+    description: "Four eminent Indian directors explore sex, relationships, desire and love through short films.",
     image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAR0SpFVkRG1Ylzn-34NpTXevOAnGsqyDHoySNib9rrg&s=10",
     video: "https://www.youtube.com/embed/PhNJ34l5NFo"
   },
   {
     id: 4,
     title: "Alpha",
-    description: "Two girls are forced to join forces and pushed to their limits as they confront a ruthless nemesis, leading to a brutal showdown with unexpected allies.",
+    description: "Two girls are forced to join forces and pushed to their limits as they confront a ruthless nemesis.",
     image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQi3ch0v1VMdfLZ7ID4emsJjP7kYGk1sccg6QinZOYzg&s",
     video: "https://www.youtube.com/embed/QRqGwGwo1Y0"
   },
@@ -38,26 +38,27 @@ const movies = [
 
 function Movies({ movie }) {
   return (
-    <div className="absolute hidden group-hover:block z-50 top-0 left-0 w-[220px] bg-black rounded-lg overflow-hidden">
+    <div className="absolute hidden group-hover:block z-50 top-0 left-0 w-[180px] sm:w-[200px] md:w-[220px] bg-black rounded-lg overflow-hidden">
 
       <img
         src={movie.image}
         alt={movie.title}
-        className="w-full h-[130px] object-cover"
+        className="w-full h-[110px] sm:h-[120px] md:h-[130px] object-cover"
       />
 
-      <div className="p-3">
-        <h2 className="text-white font-bold text-lg">
+      <div className="p-2 sm:p-3">
+        <h2 className="text-white font-bold text-base sm:text-lg">
           {movie.title}
         </h2>
 
-        <p className="text-gray-300 text-sm mt-1">
+        <p className="text-gray-300 text-xs sm:text-sm mt-1">
           {movie.description}
         </p>
 
         <button
-        onClick={() => window.open(movie.video, "_blank")}
-        className="bg-white text-black px-3 py-1 rounded mt-3">
+          onClick={() => window.open(movie.video, "_blank")}
+          className="bg-white text-black px-3 py-1 rounded mt-3 text-sm"
+        >
           Play Now
         </button>
       </div>
